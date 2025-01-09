@@ -1,0 +1,200 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background-color: #2c2c2c;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Player Section */
+.player {
+  padding: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.player-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.parallel-lines div {
+  width: 20px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 4px 0;
+}
+
+.fcc-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.player-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#player-album-art img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.player-display {
+  flex: 1;
+}
+
+.player-display-song-artist {
+  margin-bottom: 20px;
+}
+
+#player-song-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#player-song-artist {
+  font-size: 16px;
+  color: #b3b3b3;
+}
+
+.player-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.player-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.player-buttons button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.player-buttons button svg {
+  fill: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+/* Playlist Section */
+.playlist {
+  padding: 20px;
+}
+
+.playlist-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.playlist-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+#playlist-songs {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#playlist-songs li {
+  padding: 10px;
+  background-color: #3a3a3a;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#playlist-songs li:hover {
+  background-color: #4a4a4a;
+}
+
+/* Scrollbar Styling */
+#playlist-songs::-webkit-scrollbar {
+  width: 8px;
+}
+
+#playlist-songs::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+#playlist-songs::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+#playlist-songs::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .player-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #player-album-art img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .player-buttons {
+    gap: 10px;
+  }
+
+  .player-buttons button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .playlist-title {
+    font-size: 18px;
+  }
+
+  #playlist-songs li {
+    font-size: 14px;
+  }
+}
