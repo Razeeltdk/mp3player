@@ -1,4 +1,4 @@
-/* General Reset */
+/* general Reset */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
   padding: 20px;
 }
 
-/* Container */
+/* container */
 .container {
   background-color: #2c2c2c;
   border-radius: 15px;
@@ -169,7 +169,7 @@ body {
   background: #555;
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
   .player-content {
     flex-direction: column;
